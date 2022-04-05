@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1649179871 source:d:\computer_graphices\project\main.cpp
+	<iostream>
+	<graphics.h>
+	"emoji.h"
+	"flag.h"
+	"animated_circle.h"
+	"bar_chart.h"
+	"exit_output.h"
+
+1649177029 d:\computer_graphices\project\emoji.h
+
+1649177200 d:\computer_graphices\project\flag.h
+
+1649179654 d:\computer_graphices\project\animated_circle.h
+
+1649176983 d:\computer_graphices\project\bar_chart.h
+
+1649179896 d:\computer_graphices\project\exit_output.h
+
