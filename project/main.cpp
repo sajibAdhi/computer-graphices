@@ -3,8 +3,9 @@
 #include "emoji.h"
 #include "flag.h"
 #include "animated_circle.h"
-#include "bar_chart.h"
+#include "custom_chart.h"
 #include "exit_output.h"
+#include "name.h"
 
 using namespace std;
 
@@ -12,7 +13,7 @@ bool stayInProgram = true;
 
 void pattern(string input)
 {
-    cout<<"-----     "<<input<<endl;
+    cout<<"\t\t\t-----     "<<input<<endl;
 }
 
 void invoke(void (*func)())
@@ -20,6 +21,7 @@ void invoke(void (*func)())
     int gd = DETECT,gm;
     initgraph(&gd, &gm, "C:\\TC\\BGI");
 
+    name();
     exit_output();
     func();
 
@@ -33,14 +35,19 @@ int main()
     int x;
     while(stayInProgram)
     {
-        cout<<"Computer Graphics Project"<<endl;
+        system("CLS");
+        cout<<"\t\t\t<<<<<<<<<< Computer Graphics Project >>>>>>>>>"<<endl;
+        cout<<"\t\t\t<<<<<<<<<<        Sjaib Adhikary     >>>>>>>>>"<<endl;
+        cout<<"\t\t\t<<<<<<<<<<        CSE1901016103      >>>>>>>>>"<<endl;
+        cout<<"\t\t\t<<<<<<<<<<        16A2               >>>>>>>>>"<<endl;
         pattern("1. Flag");
         pattern("2. Emoji");
         pattern("3. Animated Circle");
         pattern("4. Bar Chart");
-        pattern("5. Exit");
+        pattern("5. Pie Chart");
 
         pattern("Enter a Number to Get a 2D Graphical Image");
+        pattern("Press Any Key To Exit");
         cin>>x;
 
         switch(x)
@@ -57,6 +64,9 @@ int main()
         case 4:
             invoke(&bar_chart);
             break;
+        case 5:
+            invoke(&pie_chart);
+            break;
         default:
             stayInProgram = false;
             break;
@@ -64,5 +74,6 @@ int main()
 
     }
 
+    exit(0);
     return 0;
 }

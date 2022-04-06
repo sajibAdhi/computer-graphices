@@ -1,5 +1,5 @@
 void exit_output(){
-    setcolor(4);
+    setcolor(WHITE);
 
     outtextxy(30,70,"SAJIB");
     outtextxy(30,100,"Press");
